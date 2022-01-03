@@ -5,51 +5,27 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 日本(绿头外网集团)(Public), server: shcu01a.iplc188.com, port: 10001, type: vmess, uuid: 897a19f0-8df1-4ba1-a4a8-05331a82c2ab, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 美国(绿头外网集团)(Public), server: shcn2-01.iplc188.com, port: 10012, type: vmess, uuid: 897a19f0-8df1-4ba1-a4a8-05331a82c2ab, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 2022.01.03_🇭🇰HK | 4.98Mb, server: 84.17.37.55, port: 8389, type: ss, cipher: chacha20-ietf-poly1305, password: tjwRqQvteAjt3xFmbZTA, udp: true}
-  - {name: mattkaydiary.com|美国USUSA/Seattle_51, server: 38.91.102.96, port: 5601, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: mattkaydiary.com|美国USUSA/Seattle_19, server: 38.91.102.86, port: 3389, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: 新加坡 012, server: 139.99.62.207, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
-  - {name: Pool_🇭🇰HK | 4.50Mb, server: 118.107.244.112, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
+  - {name: 美国(绿头外网集团)(Public), server: 169.197.142.39, port: 5000, type: ss, cipher: aes-256-gcm, password: Y6R9pAtvxxzmGC, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 日本(绿头外网集团)(Public)
       - 美国(绿头外网集团)(Public)
-      - 2022.01.03_🇭🇰HK | 4.98Mb
-      - mattkaydiary.com|美国USUSA/Seattle_51
-      - mattkaydiary.com|美国USUSA/Seattle_19
-      - 新加坡 012
-      - Pool_🇭🇰HK | 4.50Mb
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 日本(绿头外网集团)(Public)
       - 美国(绿头外网集团)(Public)
-      - 2022.01.03_🇭🇰HK | 4.98Mb
-      - mattkaydiary.com|美国USUSA/Seattle_51
-      - mattkaydiary.com|美国USUSA/Seattle_19
-      - 新加坡 012
-      - Pool_🇭🇰HK | 4.50Mb
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 日本(绿头外网集团)(Public)
       - 美国(绿头外网集团)(Public)
-      - 2022.01.03_🇭🇰HK | 4.98Mb
-      - mattkaydiary.com|美国USUSA/Seattle_51
-      - mattkaydiary.com|美国USUSA/Seattle_19
-      - 新加坡 012
-      - Pool_🇭🇰HK | 4.50Mb
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -68,13 +44,7 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 日本(绿头外网集团)(Public)
       - 美国(绿头外网集团)(Public)
-      - 2022.01.03_🇭🇰HK | 4.98Mb
-      - mattkaydiary.com|美国USUSA/Seattle_51
-      - mattkaydiary.com|美国USUSA/Seattle_19
-      - 新加坡 012
-      - Pool_🇭🇰HK | 4.50Mb
   - name: 🌏 国内媒体
     type: select
     proxies:
@@ -85,38 +55,20 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 日本(绿头外网集团)(Public)
       - 美国(绿头外网集团)(Public)
-      - 2022.01.03_🇭🇰HK | 4.98Mb
-      - mattkaydiary.com|美国USUSA/Seattle_51
-      - mattkaydiary.com|美国USUSA/Seattle_19
-      - 新加坡 012
-      - Pool_🇭🇰HK | 4.50Mb
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 日本(绿头外网集团)(Public)
       - 美国(绿头外网集团)(Public)
-      - 2022.01.03_🇭🇰HK | 4.98Mb
-      - mattkaydiary.com|美国USUSA/Seattle_51
-      - mattkaydiary.com|美国USUSA/Seattle_19
-      - 新加坡 012
-      - Pool_🇭🇰HK | 4.50Mb
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 日本(绿头外网集团)(Public)
       - 美国(绿头外网集团)(Public)
-      - 2022.01.03_🇭🇰HK | 4.98Mb
-      - mattkaydiary.com|美国USUSA/Seattle_51
-      - mattkaydiary.com|美国USUSA/Seattle_19
-      - 新加坡 012
-      - Pool_🇭🇰HK | 4.50Mb
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -132,13 +84,7 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 日本(绿头外网集团)(Public)
       - 美国(绿头外网集团)(Public)
-      - 2022.01.03_🇭🇰HK | 4.98Mb
-      - mattkaydiary.com|美国USUSA/Seattle_51
-      - mattkaydiary.com|美国USUSA/Seattle_19
-      - 新加坡 012
-      - Pool_🇭🇰HK | 4.50Mb
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
